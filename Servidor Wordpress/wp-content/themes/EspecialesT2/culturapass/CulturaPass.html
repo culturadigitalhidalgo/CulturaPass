@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CulturaPass</title>
+<link rel="stylesheet" type="text/css" href="scTheme.css">
+</head>
+
+<body>
+<header></header>
+<nav>
+  <div id="logo">Logo</div>
+  <label for="drop" class="toggle">Menu</label>
+  <input type="checkbox" id="drop" />
+  <ul class="menu">
+    <li><!-- Menu desplegable -->
+      <label for="drop-1" class="toggle">Cartelera +</label>
+      <a href="#">Cartelera</a>
+      <input type="checkbox" id="drop-1"/>
+      <ul>
+        <li><a href="#">Presencial</a></li>
+        <li><a href="#">Virtual</a></li>
+      </ul>
+    </li>
+    
+    <li><!-- Menu desplegable -->
+      <label for="drop-2" class="toggle">Servicios +</label>
+      <a href="#">Servicios</a>
+      <input type="checkbox" id="drop-2"/>
+      <ul>
+        <li><a href="#">Saldo</a></li>
+        <li><a href="#">Movimientos</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Reservaciones</a></li>
+    
+    <li><!-- Menu desplegable anidado -->
+      <label for="drop-3" class="toggle">Configuración +</label>
+      <a href="#">Configuración</a>
+      <input type="checkbox" id="drop-3"/>
+      <ul>
+        <li><a href="#">Mis datos</a></li>
+        <li><a href="#">Preferencias</a></li>
+        
+        <li>
+          <label for="drop-4" class="toggle">Información +</label>
+          <a href="#">Información</a>
+          <input type="checkbox" id="drop-4"/>
+          <ul>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Sobre CulturaPass</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<section id="content">
+<div class="headUser">
+	<h2>&iexcl;Bienvenido,  !</h2>
+    <div class="salir">
+        <h2><a href="http://192.168.100.92/worpress/wp-login.php?action=logout">Salir</a></h2>
+    </div>
+</div>
+    
+<div class="cpContent">
+	<h2>Reservaciones</h2>
+    <div class="boxevento">
+    	<span class="title"></span>
+        <span class="fecha">Fecha: </span>
+        <span class="hora">Hora: </span>
+        <span class="cupo">&iexcl;Evento lleno!</span>
+        <span class="registrado"></span>
+    </div>
+</div><!-- cpContent -->
+    
+<div style="clear:both; height:60px;"></div>
+
+ <div id="precargadiv">
+    <div id="precarga" class="" style="text-align: center;">            
+        <img src="../wp-content/themes/EspecialesT2/culturapass/siscp/images/cargando.gif" style=" width: 100px; height: 100px;"/><br>
+        <b>Cargando Informaci&oacute;n. Espere...</b>
+    </div>	
+</div>
+
+
+</section>
+
+</body>
+</html>

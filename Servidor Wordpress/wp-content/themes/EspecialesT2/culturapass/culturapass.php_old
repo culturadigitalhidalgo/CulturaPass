@@ -1,0 +1,227 @@
+<?php
+//require ('../../../../wp-load.php');	
+	global $current_user;
+	get_currentuserinfo();
+
+	//echo 'Username: ' . $current_user->user_login . "<br>";
+	//echo 'User email: ' . $current_user->user_email . "<br>";
+	//echo 'User level: ' . $current_user->user_level . "<br>";
+	//echo 'User first name: ' . $current_user->user_firstname . "<br>";
+	//echo 'User last name: ' . $current_user->user_lastname . "<br>";
+	//echo 'User ID: ' . $current_user->ID . "<br>";
+	echo 'Bienvenido: ' . $current_user->display_name . "<br><br>";
+	
+
+	//$all_meta_for_user = get_user_meta( $current_user->ID );
+	//print_r( $all_meta_for_user );
+
+	$all_meta_for_user = array_map( function( $a ){ return $a[0]; }, get_user_meta( $current_user->ID ) );
+	//print_r( $all_meta_for_user );
+	//echo 'ID culturapass: '.$all_meta_for_user['cp_id_culturapass'].'<br><br>';
+	if( !empty($all_meta_for_user['cp_id_culturapass']) ){
+		//echo "Genero: ".$all_meta_for_user['cp_gen'];
+		//echo ':)';
+		echo 'Puedes hacer reservaciones :)';
+	}else{
+		echo '<br>:(  Debes acudir acudir aun recinto certificado por las Secretaría de Cultura del Estado de Hidalgo; donde al presentar una identificación oficial se te activara y entregara tu CulturaPass';
+	}
+
+
+
+
+
+echo '<br>';
+echo '<br>';
+echo 'Promociones';
+echo '<br>';
+echo 'Reservaciones';
+echo '<br>';
+echo 'Consultas';
+echo '<br>';
+echo'<a href="http://cultura.hidalgo.gob.mx/wp-login.php?action=logout">Salir</a>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+get_posts(
+$args=array(
+    'post_type'      => 'eventos',
+    'posts_per_page' => '-1',
+    'post_status' => 'publish',
+    'meta_query'    => array()
+	)
+);
+if($selCosto!='0'){
+  array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'tipo_entrada', 
+                 'value' => $selCosto, 
+                 'compare' => '==',
+      )),
+  ));
+}
+if($selPublico != '0'){
+  array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'publico', 
+                 'value' => $selPublico, 
+                 'compare' => '==',
+      )),
+  ));
+}
+if($selDisciplina!='0'){
+  array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'disciplina', 
+                 'value' => $selDisciplina, 
+                 'compare' => '==',
+      )),
+  ));
+}
+if($selOrganiza!='4'){
+  array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'tipo_organismo', 
+                 'value' => $selOrganiza, 
+                 'compare' => '==',
+      )),
+  ));
+}
+if($selMunicipios!='0'){
+  array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'lugar', 
+                 'value' => $selMunicipiosT, 
+                 'compare' => 'IN',
+      )),
+    ));
+}
+if($selRecinto!='0'){
+  array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'lugar', 
+                 'value' => $selRecintosT, 
+                 'compare' => 'IN',
+      )),
+    ));
+}
+if($selCategorias!='0'){
+  array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'categoria', 
+                 'value' => $selCategorias, 
+                 'compare' => 'LIKE',
+      )),
+    ));
+}
+
+$metaQuery = count($args['meta_query']);
+if ($metaQuery>=2) {
+  array_push($args['meta_query'], array(
+      'relation'  => 'AND',
+      ));
+}
+
+$posts1 = get_posts($args);
+$array_de_resultados = Array(); 
+
+foreach( $posts1 as $post ){
+	$ID = get_the_ID();
+	$array_de_fechas = Array(); 
+	
+	if( have_rows('fechas') ){
+			while( have_rows('fechas') ){
+				the_row();
+				$array_de_fechas[] = get_sub_field('fecha',false);
+			}
+		}
+	
+	$result = array_intersect($array_fechas_actual, $array_de_fechas);
+
+	if (!empty($result)) {
+		$array_de_resultados[] = [$ID, reset($result)];
+		$bandera=1;
+	}//hubo resultado
+} //end foreach
+
+if($bandera == 0){
+    echo '<div class="msj_error">No existen resultados con los parámetros aplicados</div>';
+}else{
+	
+foreach ($array_de_resultados as $clave => $fila){
+	$fech[$clave] = $fila['1'];
+}
+array_multisort($fech, SORT_ASC, $array_de_resultados);
+
+$myarray = Array(); 
+foreach ($array_de_resultados as $fila){
+	$myarray[] = $fila[0];
+}
+*/
+
+
+
+
+
+get_posts(
+$args=array(
+    'post_type'      => 'eventos',
+    'posts_per_page' => '-1',
+    'post_status' => 'publish',
+    'meta_query'    => array()
+	)
+);
+
+  array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'publico', 
+                 'value' => 'Adultos', 
+                 'compare' => '==',
+      )),
+  ));
+
+ array_push($args['meta_query'], array(
+      array(
+             array(
+                 'key' => 'tipo_entrada', 
+                 'value' => 'Pre Registro', 
+                 'compare' => '===',
+      )),
+  ));
+
+
+
+  array_push($args['meta_query'], array(
+      'relation'  => 'AND',
+      ));
+$posts = get_posts($args);
+foreach( $posts as $post ){
+	echo $ID = get_the_ID();
+	echo '<br>';
+	
+    //print_r( get_post_meta( get_the_ID() ) ); 
+    print_r( get_post_meta( $ID, 'tipo_entrada', true ) );
+    echo '<br>';
+    echo '<br>';
+}
+//}
+
+?>

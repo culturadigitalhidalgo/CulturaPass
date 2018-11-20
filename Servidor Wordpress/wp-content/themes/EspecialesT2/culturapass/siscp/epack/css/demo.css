@@ -1,0 +1,246 @@
+/**
+*
+* ---------------------------------------------------------
+*
+* Template : HoverMe - A Pure CSS3 Animation Packages
+* Author : thecodrops
+* Author URI : http://thecodrops.com
+*
+* ---------------------------------------------------------
+*
+*/
+
+
+/*-----------------------------------
+    Basic Style 
+--------------------------------------*/
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 24px;
+    font-size: 15px;
+    color: #818181;
+}
+p {
+    color: #888;
+}
+iframe,
+img {
+    border: 0;
+    width: 100%
+}
+a {
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+a,
+a:hover,
+a:focus,
+.btn:focus {
+    text-decoration: none;
+    outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #252525;
+}
+main > section {
+    padding: 70px 0;
+    position: relative;
+}
+.btn {
+    border-radius: 0;
+    border: 0;
+    position: relative;
+    text-transform: uppercase;
+}
+.btn-blue {
+    background-color: rgba(0, 158, 227, 0.78);
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+    padding: 15px 55px;
+    color: #fff;
+}
+.btn-border {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 35px;
+}
+[class*="tcb-"] {
+    margin: 6px 4px;
+}
+.table>tbody>tr>td {
+    border: 0;
+}
+.color-red {
+    color: red !important;
+}
+.bg-blue {
+    background-color: #009EE3;
+}
+.sec-color {
+    background-color: #fafafa;
+}
+.sec-spacer {
+    padding: 100px 0;
+}
+.spacer1 {
+    height: 10px;
+}
+.spacer2 {
+    height: 20px;
+}
+.spacer3 {
+    height: 30px;
+}
+.spacer4 {
+    height: 40px;
+}
+.title {
+    position: relative;
+    font-size: 24px;
+    line-height: 26px;
+    color: #444;
+    padding-bottom: 15px;
+    margin: 0;
+    margin-bottom: 50px;
+}
+.title:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    background-color: #34495e;
+    height: 1px;
+    width: 40px;
+    bottom: 0;
+}
+.title:after {
+    position: absolute;
+    content: '';
+    background-color: #34495e;
+    left: 0;
+    height: 1px;
+    width: 60px;
+    bottom: 3px;
+}
+.title.white {
+    color: #bbb;
+}
+.title.white:before, 
+.title.white:after {
+    background: rgba(255,255,255,0.4);
+}
+.text-center.title:before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.text-center.title:after {
+    left: calc(50% + 10px);
+    transform: translateX(-50%);
+}
+.bg-img {
+    background-image: url(../img/bg-img.png);
+}
+.bg-img2 {
+    background-image: url(../img/bg-img2.jpg);
+}
+.tc-element-list-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.tc-element-list-menu li a {
+    position: relative;
+    display: block;
+    padding: 20px;
+    font-size: 17px;
+    background: rgba(0, 0, 0, 0.05);
+    width: 100%;
+    color: #999;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.tc-element-list-menu li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #888;
+}
+.tc-element-list-menu li a .badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    border-radius: 4px;
+    background: #ef1c2e;
+    font-size: 11px;
+    padding: 5px 9px 6px 9px;
+    letter-spacing: 1px;
+}
+.tc-element-list-menu li a .badge.update {
+    background: #4CAF50;
+}
+.tc-element-list-menu li a .badge.hot {
+    background: #f39c12;
+}
+.title .badge {
+    border-radius: 4px;
+    background: #ef1c2e;
+    font-size: 11px;
+    padding: 5px 9px 4px 9px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+    .row [class*="col-"]:nth-child(n+2) [class*="testimonial-"] {
+        margin-top: 60px;
+    }
+}
+
+/*--------------------------------------
+    Header
+----------------------------------------*/
+.header h1 {
+    color: #444;
+    font-weight: 500;
+    font-size: 42px;
+}
+.header h3 {
+    color: #999;
+    font-weight: 400;
+}
+.header.white h1 {
+    color: #eee;
+}
+.header.white h3 {
+    color: #bbb;
+}
+
+/*--------------------------------------
+    Footer
+----------------------------------------*/
+footer {
+    background-color: #232323;
+}
+footer .container {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 14px 30px 8px 30px;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+footer a {
+    color: #aaa;
+}
+footer a:hover {
+    color: #fff;
+}
+footer .totop {
+    float: right;
+}
