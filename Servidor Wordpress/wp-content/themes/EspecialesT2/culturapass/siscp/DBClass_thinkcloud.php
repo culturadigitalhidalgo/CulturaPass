@@ -776,13 +776,13 @@
         private function genera_hash($movimientodata){
             $hash="";
             
-            $firstkey= md5($movimientodata['idusuariosc']+$movimientodata['iddispositivo']);
-            $secondkey= md5($movimientodata['idtipomovimiento']+$movimientodata['fecha_hora']+$movimientodata['monto']);
-            $thirdkey= md5($movimientodata['idmovimiento']);
-            $fourthkey= md5($movimientodata['idculturapass']+$movimientodata['idusuariocp']);
+                        
+            // POR MOTIVOS DE SEGURIDAD, SE RETIRÓ EL CÓDIGO QUE SE ENCARGA DE ENCRIPTAR DE MANERA SECUENCIAL
+            // MOVIMIENTOS ASOCIADOS A LAS CUENTAS DE CADA USUARIO.
+            // SI REQUIERE EL CÓDIGO PARA SU IMPLEMENTACIÓN EN OTRA PRÁCTICA SIMILAR, FAVOR DE CONTACTAR AL CORREO
+            // culturadigitalhidalgo@gmail.com O BIEN, COMUNICARSE AL TELÉFONO 771 778 05 38
+            // CON EL ING. ELIEL TRIGUEROS.
             
-            $hash= md5($firstkey+$secondkey+$thirdkey+$fourthkey);
-            $hash='$CPM'.$hash;
             
             return $hash;
         }
